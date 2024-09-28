@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<annotation>
+   <folder>Dataset</folder>
+   <filename>00279.jpg</filename>
+   <path>/Users/masoumzare/Downloads/__PHD__/code/Dataset-Generation-Source-Codes/Objects-Dataset-Source-Code/outputimages/00279.jpg</path>
+   <source>
+      <database>Objects Dataset (Generated)</database>
+   </source>
+   <size>
+      <width>480</width>
+      <height>480</height>
+      <depth>3</depth>
+   </size>
+   <segmented>0</segmented>
+   <object>
+      <name>1</name>
+      <bndbox>
+         <xmin>168</xmin>
+         <ymin>152</ymin>
+         <xmax>218</xmax>
+         <ymax>202</ymax>
+      </bndbox>
+   </object>
+   <object>
+      <name>5</name>
+      <bndbox>
+         <xmin>358</xmin>
+         <ymin>342</ymin>
+         <xmax>408</xmax>
+         <ymax>392</ymax>
+      </bndbox>
+   </object>
+   <distance>268.70057685088807</distance>
+   <distanceLabel>2</distanceLabel>
+</annotation>
