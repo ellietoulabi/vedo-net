@@ -513,7 +513,7 @@ mr_model = modellib.MaskRCNN(mode="training", config=config, model_dir='./')
 print("################################Loading dataset################################")
 
 
-class CatsAndDogsDataset(Dataset):
+class Creating_Dataset(Dataset):
     # load the dataset definitions
     def load_dataset(self, dataset_dir, is_train=True):
         
@@ -621,12 +621,12 @@ class CatsAndDogsDataset(Dataset):
     
 
 # prepare train set
-train_set = CatsAndDogsDataset()
+train_set = Creating_Dataset()
 train_set.load_dataset(f"{base_path}/Objects-Dataset", is_train=True)
 train_set.prepare()
 print('Train: %d' % len(train_set.image_ids))
 # prepare test/val set
-test_set = CatsAndDogsDataset()
+test_set = Creating_Dataset()
 test_set.load_dataset(f"{base_path}/Objects-Dataset", is_train=False)
 test_set.prepare()
 print('Test: %d' % len(test_set.image_ids))
