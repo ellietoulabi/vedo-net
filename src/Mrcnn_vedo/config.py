@@ -214,7 +214,7 @@ class Config(object):
         """Set values of computed attributes."""
         # Effective batch size
         self.BATCH_SIZE = self.IMAGES_PER_GPU * self.GPU_COUNT
-
+        
         # Input image size
         if self.IMAGE_RESIZE_MODE == "crop":
             self.IMAGE_SHAPE = np.array([self.IMAGE_MIN_DIM, self.IMAGE_MIN_DIM,
@@ -227,17 +227,11 @@ class Config(object):
         # See compose_image_meta() for details
         self.IMAGE_META_SIZE = 1 + 3 + 3 + 4 + 1 + self.NUM_CLASSES
 
-    def to_dict(self):
-        return {a: getattr(self, a)
-                for a in sorted(dir(self))
-                if not a.startswith("__") and not callable(getattr(self, a))}
-
     def display(self):
         """Display Configuration values."""
+        print("kkkkkkkkkkkk")
         print("\nConfigurations:")
-        for key, val in self.to_dict().items():
-            print(f"{key:30} {val}")
-        # for a in dir(self):
-        #     if not a.startswith("__") and not callable(getattr(self, a)):
-        #         print("{:30} {}".format(a, getattr(self, a)))
+        for a in dir(self):
+            if not a.startswith("__") and not callable(getattr(self, a)):
+                print("{:30} {}".format(a, getattr(self, a)))
         print("\n")
